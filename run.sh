@@ -1,0 +1,1 @@
+docker run --rm -d -p 3030:3030 --name writer-server writer-server:latest
