@@ -1,8 +1,6 @@
 FROM node:10.16
+RUN git clone https://github.com/sayantanhore/writer-server.git /app
 WORKDIR /app
-COPY ./ssl/ /app/ssl/
-COPY ./package.json /app
-COPY ./server.js /app
 RUN npm install -g yarn
 RUN yarn install
 ENTRYPOINT ["yarn", "start"]
